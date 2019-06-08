@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '!17zlksfsf*vr)1!wm&6gt!ho7epykd()#7-ip$qzj%=ia*so7'
+SECRET_KEY = 'cmcgd3a1z$d_bisty+$oc=a99#8c&7egw&8a*69-_ck3*1=4ne'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ingredients',
+    'graphene_django',
 ]
 
 MIDDLEWARE = [
@@ -119,3 +120,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+GRAPHENE = {
+    'SCHEMA': 'cookbook.schema.schema'
+}
