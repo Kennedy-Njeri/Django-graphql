@@ -24,4 +24,6 @@ class Query(object):
     def resolve_all_categories(self, info, **kwargs):
         return Category.objects.all()
 
-    
+    def resolve_all_ingredients(self, info, **kwargs):
+        # We can easily optimize query count in the resolve method
+        return Ingredient.objects.select_related('category').all()
